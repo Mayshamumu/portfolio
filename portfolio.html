@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="portfolio icon.jpeg"> <!-- edit img for ur website logo -->
+    <style>
+        .l{
+            cursor: pointer;
+            color: white;
+        }
+        .l:hover{
+            color: gray;
+        }
+        #cd{
+            
+            border: 1px solid rgb(12, 12, 12);
+            box-shadow: 2px 2px 20px rgb(0, 0, 0);
+        }
+        .partho{
+            display: block;
+            margin: 0 auto;
+        }
+
+        .distance{
+            
+            margin-left: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 50%;
+            border: 1px solid;
+            
+        }
+        .card-div{
+            width: 100%; 
+        }
+        .cards{
+            
+            
+            display: flex; 
+            justify-content: space-around;
+            
+        }
+        
+        .c{
+            border: 2px solid;
+            box-shadow: 2px 2px 20px rgb(0, 0, 0);
+            width: 300px;
+            height: 300px;
+            transition: 0.8s ;
+            
+            
+        }
+        .c:hover{
+            transform: scale(1.2);
+        }
+        .animationabotme{
+            
+            position: relative;
+            animation-name: bottom-top-abotme;
+            animation-duration: 4s;
+            animation-delay: 0.5s;
+        }
+        .animationwe{
+            position: relative;
+            animation-name: bottom-top-we;
+            animation-duration: 4s;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes bottom-top-abotme{
+            from {
+                top: -500px;
+            }
+            to{
+                
+                top: 0px;
+            }
+        }
+        @keyframes bottom-top-we{
+            from {
+                
+                top: -1200px;
+            }
+            to{
+                top: 0px;
+            }
+        }
+        .hidden{
+            display: none;
+        }
+        
+
+        .card,.card-header,.card-body,.card-footer{
+            border: 0px;
+        }
+       
+    
+        
+        
+
+
+        @media only screen and (max-width: 767px){
+            .l{
+            font-size: 10pt;
+        }
+        #cd{
+            margin-top: 50%;
+        }
+            .partho{
+                width: 150px;
+                height: 150px;
+                
+                
+            }
+            
+            #specialize-div{
+                height: 250px;
+                overflow: auto;
+            }
+            
+            .cards{
+                flex-wrap: wrap;
+                
+            }
+            .c{
+                margin-top: 5px;
+            }
+        
+      
+    }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+
+            <nav class="navbar navbar-expand bg-info ">
+
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item ">
+                        <a  class=" l nav-link "  href="#">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <p class="l nav-link  "  onclick="toggleAboutMe()">About</p>
+                    </li>
+                    <li class="nav-menu ">
+                        <p  class="l nav-link " onfocus="" onclick="toggleWorkExperience()">Work Experience</p>
+                    </li>
+                    <li class="nav-menu ">
+                        <a class="l nav-link  " href="https://drive.google.com/file/d/1gggDgsEWuZcsbCRvBqXnAv_2dpgsHWdu/view?usp=drive_link">Resume</a> <!-- here put ur drive link of pdf cv -->
+                    </li>
+                </ul>
+                
+            </nav>
+
+        </div>
+
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-5 col-sm-5">
+                        
+                        <div style="display: flex; justify-content: center; align-items: center;height: 300px;">
+                            <div>
+                                <h1 style="display: block;">Hello</h1>
+                                <h1 style="display: block; color: rgb(140, 53, 91);">I'm Maysha Mumu</h1>
+                                <h5 style="display: block;"> <!-- if u want edit this -->Web & APPs Developer</h5>
+                                <button type="button" class="btn mt-3 bg-info ">Let's talk</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-7 col-sm-7">
+                        <div id="cd" class="card " style="height: 300px; width:  300px; margin-left: 300px;">
+                            <img class="partho" class="justify-content-center m-auto" src="mimo.jpg" width="300px" height="300px">
+                        </div>
+                    </div>
+
+                    <div id="aboutme" class="animationabotme hidden">
+                        <div style="margin-top: 50px; display: flex; justify-content: center;">
+                            <div class="card" style="width: 70%;">
+                                <h1 style="display: block; margin: 0 auto;">About me</h1>
+                                <img style="border-radius: 50%; display: block; margin: 0 auto;" src="mumu1.jpg" width="120px" height="120px">
+                                <p style="font-weight: bold;"> <!-- this section edit urself -->
+                                    Hello, I'm a web & mobile apps developer from Saidpur, Nilphamari, Bangladesh. I create efficient & innovative experiences that meet user needs and business goals.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+
+                    <div style="width: 100%;margin-top: 30px; display: flex; justify-content: center;">
+                        <h1 class="d-block">Specializing in</h1>
+                    </div>
+                    
+                    <div class="card" style="font-weight: bold;">
+                        <!-- this section edit ur specialize -->
+                        I specialize in developing mobile applications and websites, encompassing information systems, responsive UI/UX design, meticulous diagram creation for better understanding, integrated coding, and thorough testing in conjunction with the Software Development Life Cycle (SDLC).
+                    </div>
+
+                    <div class="container" id="specialize-div" 
+                    style="flex-wrap: wrap; margin-top: 20px; display: flex; justify-content: center;
+                    border: 1px solid;  box-shadow: 2px 2px 20px rgb(0, 0, 0); height: 200px; width: 500px;">
+                        
+                       
+                        <img class="distance" src="html.png" width="80px" height="80px">
+                        <img class="distance" src="css.png" width="80px" height="80px">
+                        <img class="distance" src="bst.png" width="80px" height="80px">
+                        <img class="distance" src="Java.png" width="80px" height="80px">
+                        <img class="distance" src="php.png" width="80px" height="80px">
+                        
+                        
+                        
+                    </div>
+
+                    <div id="we" class="animationwe hidden card-div">
+                        <h1 style="display: block; text-align: center; margin-top: 20px;">Work Experience</h1>
+                        <div class="cards">
+
+                            <div class="c" class="card " style="background-image: url('wrk1.jpeg');">
+                                <!-- this div section edit ur work experience 1st img -->
+                            </div>
+    
+                            <div class="c" class="card " style="background-image: url('wrk2.jpeg')">
+                               <!-- this div section edit ur work experience 2nd img -->
+                            </div>
+    
+                            <div class="c" class="card " style="background-image: url('wrk3.jpg')">
+                                <!-- this div section edit ur work experience 3rd img -->
+                            </div>
+    
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="card-footer text-center">
+            <span style="font-size: 8pt;">Created by Maysha</span> <br>
+            <span style="font-size: 8pt;">mayshamumu13@gmail.com</span>
+        </div>
+
+    </div>
+
+
+    <script>
+       
+
+       
+    function toggleAboutMe() {
+        var x = document.getElementById('aboutme');
+        x.classList.toggle('hidden');
+        x.scrollIntoView({behavior : 'smooth'});
+        
+    }
+
+    function toggleWorkExperience() {
+        var y = document.getElementById('we');
+        y.classList.toggle('hidden');
+        y.scrollIntoView({ behavior: 'smooth' });
+
+       
+    }
+
+   
+
+
+    </script>
+    
+</body>
+</html>
